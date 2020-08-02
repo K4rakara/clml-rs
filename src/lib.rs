@@ -56,7 +56,7 @@ pub fn clml(target: &str) -> String {
     // Do movement replacements.
     {
         {
-            let regex = Regex::new(r#"<to (\d) (\d)>"#).unwrap();
+            let regex = Regex::new(r#"<to (\d+) (\d+)>"#).unwrap();
             to_return = regex.replace_all(to_return.clone().as_str(), |capture: &Captures| {
                 format!("\u{001b}[{};{}H",
                     capture.get(1).unwrap().as_str(),
@@ -64,25 +64,25 @@ pub fn clml(target: &str) -> String {
             }).to_string();
         }
         {
-            let regex = Regex::new(r#"<up (\d)>"#).unwrap();
+            let regex = Regex::new(r#"<up (\d+)>"#).unwrap();
             to_return = regex.replace_all(to_return.clone().as_str(), |capture: &Captures| {
                 format!("\u{001b}[{}A", capture.get(1).unwrap().as_str())
             }).to_string();
         }
         {
-            let regex = Regex::new(r#"<down (\d)>"#).unwrap();
+            let regex = Regex::new(r#"<down (\d+)>"#).unwrap();
             to_return = regex.replace_all(to_return.clone().as_str(), |capture: &Captures| {
                 format!("\u{001b}[{}B", capture.get(1).unwrap().as_str())
             }).to_string();
         }
         {
-            let regex = Regex::new(r#"<forward (\d)>"#).unwrap();
+            let regex = Regex::new(r#"<forward (\d+)>"#).unwrap();
             to_return = regex.replace_all(to_return.clone().as_str(), |capture: &Captures| {
                 format!("\u{001b}[{}C", capture.get(1).unwrap().as_str())
             }).to_string();
         }
         {
-            let regex = Regex::new(r#"<backward (\d)>"#).unwrap();
+            let regex = Regex::new(r#"<backward (\d+)>"#).unwrap();
             to_return = regex.replace_all(to_return.clone().as_str(), |capture: &Captures| {
                 format!("\u{001b}[{}D", capture.get(1).unwrap().as_str())
             }).to_string();
