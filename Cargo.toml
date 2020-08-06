@@ -7,3 +7,10 @@ edition = "2018"
 [dependencies]
 lazy_static = "1.4.0"
 regex="1"
+rand = "0.7"
+mlua = { version = "0.4.1", features = [ "luajit" ], optional = true }
+
+[features]
+default = [ "basic", "advanced" ]
+basic = []
+advanced = [ "mlua" ]
