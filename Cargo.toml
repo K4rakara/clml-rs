@@ -1,6 +1,6 @@
 [package]
 name = "clml_rs"
-version = "0.2.0"
+version = "0.2.1"
 authors = ["K4rakara <jack@insertdomain.name>"]
 edition = "2018"
 
