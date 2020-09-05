@@ -1,6 +1,6 @@
 [package]
 name = "clml_rs"
-version = "0.2.1"
+version = "0.3.0"
 authors = ["K4rakara <jack@insertdomain.name>"]
 edition = "2018"
 
@@ -8,9 +8,3 @@ edition = "2018"
 lazy_static = "1.4.0"
 regex="1"
 rand = "0.7"
-mlua = { version = "0.4.1", features = [ "luajit" ], optional = true }
-
-[features]
-default = [ "basic", "advanced" ]
-basic = []
-advanced = [ "mlua" ]

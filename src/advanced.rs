@@ -1,4 +1,4 @@
-use crate::mlua;
+/*use crate::mlua;
 use crate::rand;
 use crate::regex;
 
@@ -176,4 +176,4 @@ mod tests {
 		assert!(try_parse.is_ok());
 		assert_eq!(try_parse.unwrap(), "Hello world, Hello universe.");
 	}
-}
+}*/
