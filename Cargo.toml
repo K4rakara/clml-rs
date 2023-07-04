@@ -2,7 +2,13 @@
 name = "clml_rs"
 version = "0.3.0"
 authors = ["K4rakara <jack@insertdomain.name>"]
-edition = "2018"
+edition = "2021"
+
+[profile.release]
+strip = true
+opt-level = 3
+lto = true
+codegen-units = 1
 
 [dependencies]
 lazy_static = "1.4.0"
